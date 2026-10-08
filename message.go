@@ -233,6 +233,7 @@ func (cli *Client) parseMessageInfo(node *waBinary.Node) (*types.MessageInfo, er
 	info.ServerID = types.MessageServerID(ag.OptionalInt("server_id"))
 	info.Timestamp = ag.UnixTime("t")
 	info.PushName = ag.OptionalString("notify")
+	info.Username = ag.OptionalString("username")
 	info.Category = ag.OptionalString("category")
 	info.Type = ag.OptionalString("type")
 	info.Edit = types.EditAttribute(ag.OptionalString("edit"))
